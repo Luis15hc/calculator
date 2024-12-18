@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Black background */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    background-color: #1e1e1e; /* Very dark gray background */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 0, 0.5); /* Strong yellow shadow */
+    width: 360px; /* Increased width for better fit */
+}
+
+#display {
+    width: 95%;
+    height: 60px;
+    font-size: 28px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #000; /* Black background */
+    color: #FFFF; /* White text */
+    box-shadow: inset 0px 0px 5px rgba(255, 255, 0, 0.3); /* Inner yellow shadow */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px; /* Increased padding for larger buttons */
+    font-size: 22px; /* Slightly larger font size */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #333; /* Dark gray background */
+    color: #FFD700; /* Yellow text */
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; /* Ensure padding does not affect the button size */
+}
+
+button:hover {
+    background-color: #444; /* Slightly lighter gray */
+}
+
+button:active {
+    background-color: #555; /* Even lighter gray */
+    box-shadow: inset 0px 0px 5px rgba(255, 255, 0, 0.5); /* Inner yellow shadow */
+}
+
+button.operator {
+    background-color: #666; /* Different color for operators */
+}
+
+button.operator:hover {
+    background-color: #777;
+}
+
+button.operator:active {
+    background-color: #888;
+}
+
+.zero {
+    grid-column: span 2; /* Make zero button span two columns */
+}
+
+.button-large {
+    grid-column: span 2; /* Make certain buttons larger */
+}
